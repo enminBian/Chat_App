@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Socket IO</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://unpkg.com/vue"></script> 
+</head>
+<body>
+	<main id="app">
+		<section class="form-container">
+			<label for="nickname">Your Nickname</label>
+			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+			<label for="avatar">Choose Your Image</label>
+			<span>
+				<input type="radio" name="sex" value="/img/male.jpg" class="male sex" :class="{ 'sexselect': current === 1 }" v-model="avatar" v-on:click="addClass(1)"/>
+				<input type="radio" name="sex" value="/img/female.jpg" class="female sex" :class="{ 'sexselect': current === 2 }" v-model="avatar" v-on:click="addClass(2)"/>
+			</span>
+			<form>
+				<label for="message">Let‘s start chatting</label>
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+				<input type="submit" @click.prevent="dispatchMessage" value="send">
+			</form>
+		</section>
+		
+		<section class="messages">
+			<ul id="messages" v-for="message in messages">
+				<component :is="message.type" :msg="message"></component>
+			</ul>
+		</section>		
+	</main>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="module" src="js/main.js"></script>
+</body>
+</html>

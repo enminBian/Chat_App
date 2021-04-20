@@ -1,0 +1,26 @@
+{
+  "name": "mengyang-chatapp",
+  "version": "1.0.0",
+  "description": "chat app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enminBian/Chat_app.git"
+  },
+  "author": "Mengyang Li",
+  "license": "ISC",
+  "homepage": "https://github.com/enminBian/Chat_app#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "randomcolor": "^0.5.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-image": "^4.4.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
