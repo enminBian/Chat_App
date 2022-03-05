@@ -1,0 +1,206 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 21px Helvetica, Arial;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+
+.form-container, .messages {
+    padding: 20px;
+}
+
+.form-container {
+    /*flex: 1;*/
+    width:22%;
+    border: 2px solid #10191d;
+    background-color: #889ea7;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.messages {
+    flex: 2;
+    background-color: #1d2222;
+    border: 6px solid #b2b7b7;
+}
+
+input:not(.sex), textarea, select {
+    display: block;
+    width: 100%;
+    border: 1px solid #6561bf;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+}
+
+.sexselect {
+    border: 3px solid #ca3954;
+}
+
+.sex{
+    margin-right:30px;
+}
+
+.male {
+    display: inline-block;
+    -webkit-appearance: none;
+    height: 65px;
+    vertical-align: middle;
+    width: 65px;
+    border-radius: 50%;
+    background: url("/img/male.jpg");
+    background-size: cover;
+}
+
+.female {
+    display: inline-block;
+    -webkit-appearance: none;
+    height: 65px;
+    vertical-align: middle;
+    width: 65px;
+    border-radius: 50%;
+    background: url("/img/female.jpg");
+    background-size: cover;
+}
+
+.sex_border {
+    border: 5px solid #61bfad;
+}
+
+
+input:focus {
+    background-color: #ced2d9;
+}
+
+textarea {
+    height: 140px;
+}
+
+textarea:focus {
+    background-color: #ced2d9;
+}
+
+img.avatar-img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid #61bfad;
+    margin-top: 5px;
+}
+
+form {
+    padding: 3px;
+    margin: 12px auto;
+}
+
+form input[type=submit] {
+    width: auto;
+    padding: 10px;
+    background-color: #1146b3;
+    margin-top: 1rem;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+form input[type=submit]:hover {
+    background-color: #0a628f;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages li {
+    padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+    background: #eee;
+}
+
+.new-message {
+    width: 45%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    float: left;
+    clear: both;
+    border: .1em solid #aaa2a2;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.new-message span {
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.new-message .message-avatar {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #7b86c4;
+}
+
+.new-message .message-content {
+    margin-left: 10px;
+}
+
+.new-message .message-content .prompt {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.my-message {
+    float: right !important;
+    color: white;
+}
+
+.notification {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+    float: none;
+    clear: both;
+}
+
+.notification .dot {
+    display: inline-block;
+    height: .8em;
+    width: .8em;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.notification .smaller {
+    font-size: smaller;
+}
